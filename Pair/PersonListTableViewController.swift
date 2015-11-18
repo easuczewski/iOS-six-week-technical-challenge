@@ -47,23 +47,46 @@ class PersonListTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return PersonController.sharedController.people.count/2
+        let peopleCount = PersonController.sharedController.people.count
+        if peopleCount % 2 == 0 {
+            return (peopleCount/2)
+        } else {
+            return (peopleCount/2 + 1)
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("pairCell", forIndexPath: indexPath)
         
-            let partnerIndex: Int = (PersonController.sharedController.people.count-1) - (indexPath.row)
-            let person = PersonController.sharedController.people[indexPath.row]
-            let partner = PersonController.sharedController.people[(partnerIndex)]
+        let peopleCount = PersonController.sharedController.people.count
+        let people = PersonController.sharedController.people
         
+        if peopleCount % 2 == 0 {
+            let partnerIndex: Int = (peopleCount-1) - (indexPath.row)
+            let person = people[indexPath.row]
+            let partner = people[(partnerIndex)]
+        
+            cell.textLabel?.text = person.name
+            cell.detailTextLabel?.text = partner.name
+        } else {
+            if indexPath.row < (peopleCount/2) {
+                let partnerIndex: Int = (peopleCount-1) - (indexPath.row)
+                let person = people[indexPath.row]
+                let partner = people[(partnerIndex)]
                 cell.textLabel?.text = person.name
                 cell.detailTextLabel?.text = partner.name
-        
+            } else {
+                let person = people[indexPath.row]
+                cell.textLabel?.text = person.name
+                cell.detailTextLabel?.text = "No partner ☹️"
+            }
+            
+        }
         
         return cell
+        
     }
+    
 }
 
 
