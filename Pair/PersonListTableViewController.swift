@@ -10,8 +10,12 @@ import UIKit
 
 class PersonListTableViewController: UITableViewController {
     
+
     
-    
+    @IBAction func randomizeButtonTapped(sender: UIBarButtonItem) {
+        PersonController.sharedController.randomize()
+        tableView.reloadData()
+    }
     
     
     override func viewDidLoad() {
@@ -49,6 +53,11 @@ class PersonListTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("pairCell", forIndexPath: indexPath)
+        
+        let person = PersonController.sharedController.people[indexPath.row]
+        
+        cell.textLabel?.text = person.name
+        cell.detailTextLabel?.text = person.name
         
         return cell
     }

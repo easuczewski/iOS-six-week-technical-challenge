@@ -14,8 +14,7 @@ class PairTableViewCell: UITableViewCell {
 
     @IBOutlet weak var person1Label: UILabel!
     @IBOutlet weak var person2Label: UILabel!
-    
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,7 +26,13 @@ class PairTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    
-    
-    
 }
+
+extension PairTableViewCell {
+    
+    func updateWithPerson(person: Person) {
+        
+        person1Label.text = PersonController.sharedController.people[0].name
+    }
+}
+

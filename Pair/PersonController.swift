@@ -33,4 +33,10 @@ class PersonController {
     
     // Randomize
     
+    func randomize() {
+        
+        people.sortInPlace {(_,_) in arc4random() < arc4random()}
+        
+    }
+    
 }
