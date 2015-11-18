@@ -66,19 +66,16 @@ class PersonListTableViewController: UITableViewController {
             let person = people[indexPath.row]
             let partner = people[(partnerIndex)]
         
-            cell.textLabel?.text = person.name
-            cell.detailTextLabel?.text = partner.name
+            cell.textLabel?.text = ("\(person.name) is working with \(partner.name)")
         } else {
             if indexPath.row < (peopleCount/2) {
                 let partnerIndex: Int = (peopleCount-1) - (indexPath.row)
                 let person = people[indexPath.row]
                 let partner = people[(partnerIndex)]
-                cell.textLabel?.text = person.name
-                cell.detailTextLabel?.text = partner.name
+                cell.textLabel?.text = ("\(person.name) is working with \(partner.name)")
             } else {
                 let person = people[indexPath.row]
-                cell.textLabel?.text = person.name
-                cell.detailTextLabel?.text = "No partner ☹️"
+                cell.textLabel?.text = ("\(person.name) has no partner ☹️")
             }
             
         }
