@@ -57,13 +57,44 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="298-31-vVf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pairCell" id="298-31-vVf">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="298-31-vVf" id="Fho-H2-gds">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNp-pk-Aui">
+                                            <rect key="frame" x="28" y="11" width="52.5" height="20.5"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fua-9s-mn8">
+                                            <rect key="frame" x="84.5" y="11" width="12" height="20.5"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVX-IN-I93">
+                                            <rect key="frame" x="100.5" y="11.5" width="55" height="20.5"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="gVX-IN-I93" firstAttribute="centerY" secondItem="Fho-H2-gds" secondAttribute="centerY" id="0A6-6p-5yG"/>
+                                        <constraint firstItem="fua-9s-mn8" firstAttribute="centerY" secondItem="Fho-H2-gds" secondAttribute="centerY" id="43A-9W-wgT"/>
+                                        <constraint firstItem="fua-9s-mn8" firstAttribute="leading" secondItem="dNp-pk-Aui" secondAttribute="trailing" constant="4" id="CTr-qA-Zff"/>
+                                        <constraint firstItem="dNp-pk-Aui" firstAttribute="leading" secondItem="Fho-H2-gds" secondAttribute="leadingMargin" constant="20" id="Rmx-yM-XFq"/>
+                                        <constraint firstItem="dNp-pk-Aui" firstAttribute="centerY" secondItem="Fho-H2-gds" secondAttribute="centerY" id="Sed-p0-MNr"/>
+                                        <constraint firstItem="gVX-IN-I93" firstAttribute="leading" secondItem="fua-9s-mn8" secondAttribute="trailing" constant="4" id="wl7-hI-LGR"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
