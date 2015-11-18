@@ -19,6 +19,7 @@ class PersonDetailViewController: UIViewController {
         } else {
             return
         }
+        nameTextField.text = ""
     }
     
 

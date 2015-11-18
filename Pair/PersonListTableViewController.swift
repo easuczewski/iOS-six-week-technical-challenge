@@ -48,19 +48,24 @@ class PersonListTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return PersonController.sharedController.people.count
+        return PersonController.sharedController.people.count/2
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("pairCell", forIndexPath: indexPath)
         
-        let person = PersonController.sharedController.people[indexPath.row]
+            let partnerIndex: Int = (PersonController.sharedController.people.count-1) - (indexPath.row)
+            let person = PersonController.sharedController.people[indexPath.row]
+            let partner = PersonController.sharedController.people[(partnerIndex)]
         
-        cell.textLabel?.text = person.name
-        cell.detailTextLabel?.text = person.name
+                cell.textLabel?.text = person.name
+                cell.detailTextLabel?.text = partner.name
+        
         
         return cell
     }
+}
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -107,4 +112,3 @@ class PersonListTableViewController: UITableViewController {
     }
     */
 
-}
