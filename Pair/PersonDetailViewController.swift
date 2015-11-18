@@ -10,6 +10,18 @@ import UIKit
 
 class PersonDetailViewController: UIViewController {
 
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBAction func saveButtonTapped(sender: UIButton) {
+        if let text = nameTextField.text {
+            PersonController.sharedController.addPerson(text)
+        } else {
+            return
+        }
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

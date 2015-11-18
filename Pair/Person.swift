@@ -12,5 +12,10 @@ struct Person {
 
     // MARK: Properties
     var name: String
+    
+    //MARK: Initializer
+    init(name: String) {
+        self.name = name
+    }
 
 }

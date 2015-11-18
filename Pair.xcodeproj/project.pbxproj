@@ -15,6 +15,7 @@
 		02B8237A1BFD19CD0001B42F /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B823791BFD19CD0001B42F /* PersonController.swift */; };
 		02B8237E1BFD1C8A0001B42F /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8237D1BFD1C8A0001B42F /* PersonDetailViewController.swift */; };
 		02B823821BFD1D1B0001B42F /* PersonListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B823811BFD1D1B0001B42F /* PersonListTableViewController.swift */; };
+		02B823841BFD236F0001B42F /* PairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B823831BFD236F0001B42F /* PairTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		02B823791BFD19CD0001B42F /* PersonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
 		02B8237D1BFD1C8A0001B42F /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		02B823811BFD1D1B0001B42F /* PersonListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonListTableViewController.swift; sourceTree = "<group>"; };
+		02B823831BFD236F0001B42F /* PairTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				02B823811BFD1D1B0001B42F /* PersonListTableViewController.swift */,
 				02B8237D1BFD1C8A0001B42F /* PersonDetailViewController.swift */,
+				02B823831BFD236F0001B42F /* PairTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02B8237A1BFD19CD0001B42F /* PersonController.swift in Sources */,
+				02B823841BFD236F0001B42F /* PairTableViewCell.swift in Sources */,
 				02B823821BFD1D1B0001B42F /* PersonListTableViewController.swift in Sources */,
 				02B823751BFD19660001B42F /* Person.swift in Sources */,
 				02B8237E1BFD1C8A0001B42F /* PersonDetailViewController.swift in Sources */,

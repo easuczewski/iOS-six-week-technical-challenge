@@ -10,12 +10,27 @@ import Foundation
 
 class PersonController {
     
+    static let sharedController = PersonController()
+    
+    var people: [Person]
+    
+    init() {
+        self.people = []
+    }
+    
     // Create
     
+    func addPerson(name: String) {
+        people.append(Person(name: name))
+    }
+    
     // Read
+    
     
     // Update
     
     // Delete
+    
+    // Randomize
     
 }
