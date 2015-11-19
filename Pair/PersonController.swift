@@ -12,33 +12,39 @@ class PersonController {
     
     private let kPeople = "people"
     
+    // MARK: Properties
     static let sharedController = PersonController()
     
     var people: [Person]
     
+    // MARK: Initializer
     init() {
         self.people = []
         
         self.loadFromPersistentStorage()
     }
     
-    // Create
+    // MARK: Methods
     
+        // Create
     func addPerson(name: String) {
         people.append(Person(name: name))
         
         self.saveToPersistentStorage()
     }
     
-    // Read
+        // Read
     
+        // Update
+    func updatePerson(name: String, idx: Int) {
+        people[idx].name = name
+        self.saveToPersistentStorage()
+        
+    }
     
-    // Update
+        // Delete
     
-    // Delete
-    
-    // Randomize
-    
+        // Randomize
     func randomize() {
         people.sortInPlace {(_,_) in arc4random() < arc4random()}
     }

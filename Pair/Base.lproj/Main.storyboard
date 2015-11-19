@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Edit Names-->
         <scene sceneID="5K2-5d-6lq">
             <objects>
                 <viewController id="j8r-SY-If0" customClass="PersonDetailViewController" customModule="Pair" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,34 +26,66 @@
                                     <action selector="saveButtonTapped:" destination="j8r-SY-If0" eventType="touchUpInside" id="xkE-HR-Pkx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is working with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfH-pE-poK">
+                                <rect key="frame" x="243.5" y="256.5" width="113.5" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVo-gb-jii">
+                                <rect key="frame" x="70" y="218" width="460" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cWo-ZN-Rts">
                                 <rect key="frame" x="70" y="285" width="460" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtE-m3-G6N">
+                                <rect key="frame" x="275" y="323" width="51" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButtonTapped:" destination="j8r-SY-If0" eventType="touchUpInside" id="dP8-md-ZXx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="s5B-qk-MVc" firstAttribute="top" secondItem="cWo-ZN-Rts" secondAttribute="bottom" constant="8" id="15W-fv-PXV"/>
+                            <constraint firstItem="gfH-pE-poK" firstAttribute="centerX" secondItem="yRc-7t-LR2" secondAttribute="centerX" id="1aE-zI-nUL"/>
                             <constraint firstItem="s5B-qk-MVc" firstAttribute="centerX" secondItem="yRc-7t-LR2" secondAttribute="centerX" id="2ca-wb-eu6"/>
+                            <constraint firstItem="gfH-pE-poK" firstAttribute="top" secondItem="GVo-gb-jii" secondAttribute="bottom" constant="8.5" id="D5R-Gx-2NL"/>
                             <constraint firstItem="cWo-ZN-Rts" firstAttribute="centerY" secondItem="yRc-7t-LR2" secondAttribute="centerY" id="FD2-cu-b1n"/>
+                            <constraint firstItem="GVo-gb-jii" firstAttribute="leading" secondItem="yRc-7t-LR2" secondAttribute="leadingMargin" constant="50" id="FPp-xb-Vbv"/>
+                            <constraint firstItem="JtE-m3-G6N" firstAttribute="centerY" secondItem="s5B-qk-MVc" secondAttribute="centerY" id="QZ1-ch-ZP5"/>
+                            <constraint firstItem="cWo-ZN-Rts" firstAttribute="top" secondItem="gfH-pE-poK" secondAttribute="bottom" constant="8" id="RQF-FX-vRy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="cWo-ZN-Rts" secondAttribute="leading" constant="-50" id="Ua8-Ca-l9z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GVo-gb-jii" secondAttribute="trailing" constant="50" id="XBV-KU-MU8"/>
+                            <constraint firstItem="JtE-m3-G6N" firstAttribute="centerX" secondItem="s5B-qk-MVc" secondAttribute="centerX" id="apq-Tp-X0U"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cWo-ZN-Rts" secondAttribute="trailing" constant="50" id="x1q-xn-shC"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="4Dj-lC-lY8"/>
+                    <navigationItem key="navigationItem" title="Edit Names" id="4Dj-lC-lY8"/>
                     <connections>
+                        <outlet property="isWorkingWithLabel" destination="gfH-pE-poK" id="mIY-iB-LkB"/>
                         <outlet property="nameTextField" destination="cWo-ZN-Rts" id="2G1-7u-dom"/>
+                        <outlet property="partnerTextField" destination="GVo-gb-jii" id="Fw6-eu-DWw"/>
+                        <outlet property="saveButton" destination="s5B-qk-MVc" id="rLd-2b-wTc"/>
+                        <outlet property="updateButton" destination="JtE-m3-G6N" id="c9Q-su-ncZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V4R-kv-cdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="175"/>
         </scene>
-        <!--Person List Table View Controller-->
+        <!--Pair-->
         <scene sceneID="kIh-vh-OLU">
             <objects>
                 <tableViewController id="2ph-6Y-ZrK" customClass="PersonListTableViewController" customModule="Pair" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,7 +115,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="j8r-SY-If0" kind="show" id="uIt-dk-Us6"/>
+                                    <segue destination="j8r-SY-If0" kind="show" identifier="toShow" id="uIt-dk-Us6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,7 +125,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="f3A-cb-WWS" userLabel="This ">
+                    <navigationItem key="navigationItem" title="Pair" id="f3A-cb-WWS" userLabel="This ">
                         <barButtonItem key="leftBarButtonItem" title="Randomize" id="VcR-nn-iic">
                             <connections>
                                 <action selector="randomizeButtonTapped:" destination="2ph-6Y-ZrK" id="u9j-tL-Qhd"/>
@@ -135,6 +167,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="92d-bS-9KP"/>
+        <segue reference="uIt-dk-Us6"/>
     </inferredMetricsTieBreakers>
 </document>
