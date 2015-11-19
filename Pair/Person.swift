@@ -20,17 +20,6 @@ struct Person {
         self.name = name
     }
 
-//    func dictionaryCopy() -> Dictionary<Int, String> {
-//        
-//        var dictionary : [Int: String] = [:]
-//        let people = PersonController.sharedController.people
-//        
-//        for n in 0...(people.count - 1) {
-//            dictionary[n] = people[n].name
-//        }
-//        
-//        return dictionary
-//    }
     
     init?(dictionary: Dictionary<String, AnyObject>) {
         guard let name = dictionary[kName] as? String else {
