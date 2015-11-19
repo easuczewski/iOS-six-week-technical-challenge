@@ -20,6 +20,7 @@ class PersonDetailViewController: UIViewController {
             return
         }
         nameTextField.text = ""
+        PersonController.sharedController.randomize()
     }
     
 
