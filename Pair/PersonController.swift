@@ -45,11 +45,13 @@ class PersonController {
         // Delete
     func deletePerson(idx: Int) {
         people.removeAtIndex(idx)
+        self.saveToPersistentStorage()
     }
     
         // Randomize
     func randomize() {
         people.sortInPlace {(_,_) in arc4random() < arc4random()}
+        self.saveToPersistentStorage()
     }
     
     // MARK: Persistence
