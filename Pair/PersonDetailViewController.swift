@@ -54,6 +54,7 @@ class PersonDetailViewController: UIViewController {
             if let idx = idx2 {
                 PersonController.sharedController.updatePerson(text, idx: idx)
             }
+            nameTextField.text = ""
         }
         
     }
