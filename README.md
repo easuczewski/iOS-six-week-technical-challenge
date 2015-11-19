@@ -20,4 +20,4 @@ Take as much time as needed to complete the challenge. Add a note at the bottom 
 
 Example:
 
-```Completed in 2.5 hours.```
+Completed in five and a half hours. I thought I was done about an hour and forty-five minutes earlier, but I'd overlooked that you wanted the names editable. I hadn't planned for this when I set things up at first, so it took a lot of time to implement.
