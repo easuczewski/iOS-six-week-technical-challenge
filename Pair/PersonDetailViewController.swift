@@ -60,20 +60,22 @@ class PersonDetailViewController: UIViewController {
     }
     
     @IBAction func delete1Tapped(sender: UIButton) {
-        if let idx = idx1 {
-            PersonController.sharedController.deletePerson(idx)
-            nameTextField.text = ""
-        }
-        
+            if let idx = idx1 {
+                PersonController.sharedController.deletePerson(idx)
+                nameTextField.text = ""
+                delete1.enabled = false
+            }
         
     }
     
     
     @IBAction func delete2Tapped(sender: UIButton) {
-        if let idx = idx2 {
-            PersonController.sharedController.deletePerson(idx)
-            partnerTextField.text = ""
-        }
+            if let idx = idx2 {
+                PersonController.sharedController.deletePerson(idx)
+                partnerTextField.text = ""
+                delete2.enabled = false
+            }
+        
     }
     
     
