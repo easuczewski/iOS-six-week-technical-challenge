@@ -53,6 +53,25 @@
                                     <action selector="updateButtonTapped:" destination="j8r-SY-If0" eventType="touchUpInside" id="dP8-md-ZXx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzw-nO-zfe">
+                                <rect key="frame" x="542" y="284" width="30" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.020532956710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="delete1Tapped:" destination="j8r-SY-If0" eventType="touchUpInside" id="ktr-oC-0HD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3u-x0-KGI">
+                                <rect key="frame" x="542" y="217" width="30" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.020532956710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,8 +80,12 @@
                             <constraint firstItem="gfH-pE-poK" firstAttribute="centerX" secondItem="yRc-7t-LR2" secondAttribute="centerX" id="1aE-zI-nUL"/>
                             <constraint firstItem="s5B-qk-MVc" firstAttribute="centerX" secondItem="yRc-7t-LR2" secondAttribute="centerX" id="2ca-wb-eu6"/>
                             <constraint firstItem="gfH-pE-poK" firstAttribute="top" secondItem="GVo-gb-jii" secondAttribute="bottom" constant="8.5" id="D5R-Gx-2NL"/>
+                            <constraint firstItem="y3u-x0-KGI" firstAttribute="centerY" secondItem="GVo-gb-jii" secondAttribute="centerY" id="DqW-TO-76M"/>
+                            <constraint firstItem="Uzw-nO-zfe" firstAttribute="centerY" secondItem="cWo-ZN-Rts" secondAttribute="centerY" id="FAA-TK-6yc"/>
                             <constraint firstItem="cWo-ZN-Rts" firstAttribute="centerY" secondItem="yRc-7t-LR2" secondAttribute="centerY" id="FD2-cu-b1n"/>
                             <constraint firstItem="GVo-gb-jii" firstAttribute="leading" secondItem="yRc-7t-LR2" secondAttribute="leadingMargin" constant="50" id="FPp-xb-Vbv"/>
+                            <constraint firstItem="y3u-x0-KGI" firstAttribute="leading" secondItem="GVo-gb-jii" secondAttribute="trailing" constant="4" id="Ila-tL-hYh"/>
+                            <constraint firstItem="Uzw-nO-zfe" firstAttribute="leading" secondItem="cWo-ZN-Rts" secondAttribute="trailing" constant="4" id="Q6T-iq-QzA"/>
                             <constraint firstItem="JtE-m3-G6N" firstAttribute="centerY" secondItem="s5B-qk-MVc" secondAttribute="centerY" id="QZ1-ch-ZP5"/>
                             <constraint firstItem="cWo-ZN-Rts" firstAttribute="top" secondItem="gfH-pE-poK" secondAttribute="bottom" constant="8" id="RQF-FX-vRy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="cWo-ZN-Rts" secondAttribute="leading" constant="-50" id="Ua8-Ca-l9z"/>
@@ -74,6 +97,8 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Edit Names" id="4Dj-lC-lY8"/>
                     <connections>
+                        <outlet property="delete1" destination="Uzw-nO-zfe" id="Szn-vQ-enU"/>
+                        <outlet property="delete2" destination="y3u-x0-KGI" id="joa-VV-Uzl"/>
                         <outlet property="isWorkingWithLabel" destination="gfH-pE-poK" id="mIY-iB-LkB"/>
                         <outlet property="nameTextField" destination="cWo-ZN-Rts" id="2G1-7u-dom"/>
                         <outlet property="partnerTextField" destination="GVo-gb-jii" id="Fw6-eu-DWw"/>

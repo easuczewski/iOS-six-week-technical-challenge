@@ -25,6 +25,14 @@ class PersonDetailViewController: UIViewController {
     
     @IBOutlet weak var updateButton: UIButton!
     
+    @IBOutlet weak var delete2: UIButton!
+    
+    @IBOutlet weak var delete1: UIButton!
+    
+    
+    
+    
+    
     @IBAction func saveButtonTapped(sender: UIButton) {
             if let text = nameTextField.text {
                 PersonController.sharedController.addPerson(text)
@@ -50,6 +58,25 @@ class PersonDetailViewController: UIViewController {
         
     }
     
+    @IBAction func delete1Tapped(sender: UIButton) {
+        if let idx = idx1 {
+            PersonController.sharedController.deletePerson(idx)
+            nameTextField.text = ""
+        }
+        
+        
+    }
+    
+    
+    @IBAction func delete2Tapped(sender: UIButton) {
+        if let idx = idx2 {
+            PersonController.sharedController.deletePerson(idx)
+            partnerTextField.text = ""
+        }
+    }
+    
+    
+    
     func updateWithPersons(person1: Person, person2: Person, idx1: Int, idx2: Int) {
         self.person1 = person1
         self.person2 = person2
@@ -59,6 +86,8 @@ class PersonDetailViewController: UIViewController {
         isWorkingWithLabel.hidden = false
         updateButton.hidden = false
         saveButton.hidden = true
+        delete1.hidden = false
+        delete2.hidden = false
         self.nameTextField.text = person1.name
         self.partnerTextField.text = person2.name
     }
@@ -69,6 +98,9 @@ class PersonDetailViewController: UIViewController {
         partnerTextField.hidden = true
         isWorkingWithLabel.hidden = true
         updateButton.hidden = true
+        delete1.hidden = true
+        delete2.hidden = true
+        
 
         // Do any additional setup after loading the view.
     }

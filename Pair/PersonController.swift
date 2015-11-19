@@ -43,6 +43,9 @@ class PersonController {
     }
     
         // Delete
+    func deletePerson(idx: Int) {
+        people.removeAtIndex(idx)
+    }
     
         // Randomize
     func randomize() {
